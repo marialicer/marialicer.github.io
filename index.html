@@ -283,12 +283,26 @@
       border-radius: 100px;
       margin-bottom: 16px;
 
-      color: #ffffff;
       font-weight: 500;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
     }
-    .tag-pink { background: rgba(232,84,122,0.12); color: var(--pink); border: 1px solid rgba(232,84,122,0.2); }
-    .tag-teal { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.2); }
-    .tag-purple { background: rgba(167,139,250,0.1); color: var(--purple); border: 1px solid rgba(167,139,250,0.2); }
+    .tag-pink {
+      background: rgba(232,84,122,0.18); /* mais fechado */
+      color: #ff6b8a; /* mais vibrante que o var(--pink) */
+      border: 1px solid rgba(232,84,122,0.4);
+    }
+    
+    .tag-teal {
+      background: rgba(45,212,191,0.18);
+      color: #5fffe0;
+      border: 1px solid rgba(45,212,191,0.4);
+    }
+    
+    .tag-purple {
+      background: rgba(167,139,250,0.18);
+      color: #c4b5fd;
+      border: 1px solid rgba(167,139,250,0.4);
+    }
 
     .project-title {
       font-family: 'Playfair Display', serif;
