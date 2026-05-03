@@ -8,15 +8,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
-      --pink: #C8924A;
-      --teal: #7A9E6E;
-      --amber: #D4A96A;
-      --purple: #A0714F;
-      --bg: #0f0d0a;
-      --card: #161310;
-      --border: rgba(200,146,74,0.09);
-      --text: #F2EDE4;
-      --muted: #9A8F80;
+      --pink: #e8547a;
+      --teal: #2dd4bf;
+      --amber: #f59e0b;
+      --purple: #a78bfa;
+      --bg: #0d0d14;
+      --card: #13131f;
+      --border: rgba(255,255,255,0.07);
+      --text: #f0eef8;
+      --muted: #8b89a0;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -48,9 +48,9 @@
       z-index: 0;
       opacity: 0.10;
     }
-    .blob-1 { width: 500px; height: 500px; background: #C8924A; top: -150px; right: -100px; }
-    .blob-2 { width: 400px; height: 400px; background: #7A9E6E; bottom: 100px; left: -150px; }
-    .blob-3 { width: 300px; height: 300px; background: #8B5E3C; top: 40%; left: 30%; }
+    .blob-1 { width: 500px; height: 500px; background: var(--pink); top: -150px; right: -100px; }
+    .blob-2 { width: 400px; height: 400px; background: var(--teal); bottom: 100px; left: -150px; }
+    .blob-3 { width: 300px; height: 300px; background: var(--purple); top: 40%; left: 30%; }
 
     .container {
       max-width: 1000px;
@@ -117,7 +117,7 @@
     }
     .name-accent {
       font-style: italic;
-      background: linear-gradient(135deg, #C8924A 0%, #D4A96A 100%);
+      background: linear-gradient(135deg, var(--pink) 0%, var(--amber) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -125,7 +125,7 @@
     .hero-role {
       font-family: 'DM Mono', monospace;
       font-size: 13px;
-      color: #A0714F;
+      color: var(--purple);
       letter-spacing: 1px;
       margin-bottom: 28px;
     }
@@ -157,16 +157,16 @@
       font-family: 'DM Sans', sans-serif;
     }
     .btn-primary {
-      background: #8B5E3C;
-      color: #F2EDE4;
+      background: var(--pink);
+      color: white;
     }
-    .btn-primary:hover { background: #7a5234; transform: translateY(-1px); }
+    .btn-primary:hover { background: #d4436a; transform: translateY(-1px); }
     .btn-ghost {
       background: transparent;
       color: var(--text);
       border: 1px solid var(--border);
     }
-    .btn-ghost:hover { border-color: rgba(200,146,74,0.25); transform: translateY(-1px); }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.2); transform: translateY(-1px); }
 
     .avatar-wrap {
       display: flex;
@@ -178,14 +178,14 @@
       width: 180px;
       height: 180px;
       border-radius: 28px;
-      background: linear-gradient(135deg, #8B5E3C 0%, #C8924A 50%, #7A9E6E 100%);
+      background: linear-gradient(135deg, #e8547a 0%, #a78bfa 50%, #2dd4bf 100%);
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: 'Playfair Display', serif;
       font-size: 56px;
       font-weight: 700;
-      color: #F2EDE4;
+      color: white;
       position: relative;
       overflow: hidden;
       flex-shrink: 0;
@@ -207,16 +207,16 @@
       align-items: center;
       gap: 7px;
       font-size: 12px;
-      color: #a3c49a;
-      background: rgba(122,158,110,0.08);
-      border: 1px solid rgba(122,158,110,0.2);
+      color: #6ee7b7;
+      background: rgba(45, 212, 191, 0.08);
+      border: 1px solid rgba(45, 212, 191, 0.2);
       border-radius: 100px;
       padding: 5px 14px;
       white-space: nowrap;
     }
     .status-dot {
       width: 6px; height: 6px;
-      background: #7A9E6E;
+      background: #2dd4bf;
       border-radius: 50%;
       animation: blink 1.8s infinite;
     }
@@ -265,11 +265,11 @@
       transition: opacity 0.25s;
       opacity: 0;
     }
-    .project-card:hover { border-color: rgba(200,146,74,0.2); transform: translateY(-4px); }
+    .project-card:hover { border-color: rgba(255,255,255,0.15); transform: translateY(-4px); }
     .project-card:hover::before { opacity: 1; }
-    .card-pink::before { background: linear-gradient(90deg, #C8924A, #D4A96A); }
-    .card-teal::before { background: linear-gradient(90deg, #7A9E6E, #A0714F); }
-    .card-purple::before { background: linear-gradient(90deg, #A0714F, #C8924A); }
+    .card-pink::before { background: linear-gradient(90deg, var(--pink), var(--amber)); }
+    .card-teal::before { background: linear-gradient(90deg, var(--teal), var(--purple)); }
+    .card-purple::before { background: linear-gradient(90deg, var(--purple), var(--pink)); }
 
     .project-tag {
       display: inline-flex;
@@ -283,9 +283,9 @@
       border-radius: 100px;
       margin-bottom: 16px;
     }
-    .tag-pink { background: rgba(200,146,74,0.10); color: #C8924A; border: 1px solid rgba(200,146,74,0.2); }
-    .tag-teal { background: rgba(122,158,110,0.10); color: #7A9E6E; border: 1px solid rgba(122,158,110,0.2); }
-    .tag-purple { background: rgba(160,113,79,0.10); color: #A0714F; border: 1px solid rgba(160,113,79,0.2); }
+    .tag-pink { background: rgba(232,84,122,0.12); color: var(--pink); border: 1px solid rgba(232,84,122,0.2); }
+    .tag-teal { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.2); }
+    .tag-purple { background: rgba(167,139,250,0.1); color: var(--purple); border: 1px solid rgba(167,139,250,0.2); }
 
     .project-title {
       font-family: 'Playfair Display', serif;
@@ -312,7 +312,7 @@
       font-size: 10px;
       padding: 3px 9px;
       border-radius: 4px;
-      background: rgba(200,146,74,0.06);
+      background: rgba(255,255,255,0.05);
       color: var(--muted);
       border: 1px solid var(--border);
     }
@@ -323,7 +323,7 @@
       width: 32px;
       height: 32px;
       border-radius: 8px;
-      background: rgba(200,146,74,0.06);
+      background: rgba(255,255,255,0.05);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -331,32 +331,7 @@
       font-size: 16px;
       transition: background 0.2s, color 0.2s;
     }
-    .project-card {
-    display: flex;
-    flex-direction: column;
-    }
-  .card-img {
-    position: relative;
-    height: 180px;
-    overflow: hidden;
-    border-radius: 20px 20px 0 0;
-  }
-    .card-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s;
-    }
-    .project-card:hover .card-img img {
-      transform: scale(1.05);
-    }
-    .card-img-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(15,13,10,0.1) 0%, rgba(15,13,10,0.7) 100%);
-    }    
-    .project-card:hover .project-arrow { background: rgba(200,146,74,0.12); color: var(--text); }
+    .project-card:hover .project-arrow { background: rgba(255,255,255,0.1); color: var(--text); }
 
     .skills-grid {
       display: grid;
@@ -376,17 +351,17 @@
       text-transform: uppercase;
       margin-bottom: 16px;
     }
-    .color-pink { color: #C8924A; }
-    .color-teal { color: #7A9E6E; }
-    .color-amber { color: #D4A96A; }
-    .color-purple { color: #A0714F; }
+    .color-pink { color: var(--pink); }
+    .color-teal { color: var(--teal); }
+    .color-amber { color: var(--amber); }
+    .color-purple { color: var(--purple); }
 
     .skill-pills { display: flex; flex-wrap: wrap; gap: 7px; }
     .skill-pill {
       font-size: 12px;
       padding: 5px 11px;
       border-radius: 6px;
-      background: rgba(200,146,74,0.05);
+      background: rgba(255,255,255,0.04);
       color: var(--text);
       border: 1px solid var(--border);
       font-weight: 400;
@@ -411,8 +386,8 @@
       justify-content: center;
       font-size: 20px;
       flex-shrink: 0;
-      background: rgba(200,146,74,0.10);
-      color: #C8924A;
+      background: rgba(232,84,122,0.12);
+      color: var(--pink);
     }
     .cert-name { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 3px; }
     .cert-issuer { font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; }
@@ -450,7 +425,7 @@
       color: var(--text);
       transition: border-color 0.2s, transform 0.2s;
     }
-    .contact-link:hover { border-color: rgba(200,146,74,0.25); transform: translateX(4px); }
+    .contact-link:hover { border-color: rgba(255,255,255,0.2); transform: translateX(4px); }
     .contact-link-icon {
       width: 38px;
       height: 38px;
@@ -515,7 +490,7 @@
       <div>
         <div class="hero-eyebrow fade-in">
           <span class="eyebrow-line"></span>
-          Data Analytics
+          Data Science & Analytics
         </div>
         <h1 class="fade-in delay-1">
           Maria<br />
@@ -552,74 +527,61 @@
 
       <div class="projects-grid">
 
-  <a class="project-card card-pink" href="https://github.com/marialicer/airbnb-nyc-price" target="_blank">
-    <div class="card-img">
-      <img src="airbnb.png" alt="Airbnb NYC">
-      <div class="card-img-overlay"></div>
-      <span class="project-tag tag-pink" style="position:absolute;top:14px;left:14px;margin:0">EDA · Clustering</span>
-      <span class="project-arrow" style="top:14px;right:14px">↗</span>
-    </div>
-    <div style="padding:20px;display:flex;flex-direction:column;gap:10px;flex:1">
-      <h3 class="project-title">Airbnb NYC — Análise de Mercado</h3>
-      <p class="project-desc">Distribuição de preços por distrito, relação entre reviews e valor, e segmentação de ~48 mil anúncios em três perfis distintos.</p>
-      <div class="project-tools">
-        <span class="tool-badge">Python</span>
-        <span class="tool-badge">Pandas</span>
-        <span class="tool-badge">K-Means</span>
-        <span class="tool-badge">Seaborn</span>
-        <span class="tool-badge">Scikit-learn</span>
+        <a class="project-card card-pink" href="https://github.com/marialicer/airbnb-nyc-price" target="_blank">
+          <div class="project-arrow">↗</div>
+          <span class="project-tag tag-pink">EDA · Clustering</span>
+          <h3 class="project-title">Airbnb NYC — Análise de Mercado</h3>
+          <p class="project-desc">
+            Análise do mercado de aluguel por temporada em Nova York com base nos dados públicos do Airbnb (2019). Investigação da distribuição de preços por distrito e bairro, relação entre reviews e preço, e segmentação de ~48 mil anúncios em três perfis distintos.
+          </p>
+          <div class="project-tools">
+            <span class="tool-badge">Python</span>
+            <span class="tool-badge">Pandas</span>
+            <span class="tool-badge">K-Means</span>
+            <span class="tool-badge">Seaborn</span>
+            <span class="tool-badge">Scikit-learn</span>
+          </div>
+        </a>
+
+        <a class="project-card card-teal" href="https://github.com/marialicer/hotel-reviews" target="_blank">
+          <div class="project-arrow">↗</div>
+          <span class="project-tag tag-teal">NLP · ML</span>
+          <h3 class="project-title">HospedaAI — Análise de Sentimentos</h3>
+          <p class="project-desc">
+            Análise de sentimentos em avaliações de hotéis do TripAdvisor. Pipeline completo com pré-processamento de texto, TF-IDF, comparação de modelos clássicos e BERT, com foco em maximizar a detecção de hóspedes insatisfeitos.
+          </p>
+          <div class="project-tools">
+            <span class="tool-badge">Python</span>
+            <span class="tool-badge">BERT</span>
+            <span class="tool-badge">TF-IDF</span>
+            <span class="tool-badge">NLP</span>
+            <span class="tool-badge">Scikit-learn</span>
+          </div>
+        </a>
+
+        <a class="project-card card-purple" href="https://github.com/marialicer/gaming-mental-health" target="_blank">
+          <div class="project-arrow">↗</div>
+          <span class="project-tag tag-purple">EDA · Saúde Mental</span>
+          <h3 class="project-title">Gaming & Mental Health — Análise de Dados</h3>
+          <p class="project-desc">
+            EDA investigando a relação entre tempo de jogo, saúde mental, qualidade do sono e impactos na vida real. Identifica padrões de comportamento, pontos críticos de uso e fatores associados ao risco de dependência em jogos eletrônicos.
+          </p>
+          <div class="project-tools">
+            <span class="tool-badge">Python</span>
+            <span class="tool-badge">Pandas</span>
+            <span class="tool-badge">NumPy</span>
+            <span class="tool-badge">Matplotlib</span>
+            <span class="tool-badge">Plotly</span>
+          </div>
+        </a>
+
+        <div class="project-card card-pink" style="background: linear-gradient(135deg, rgba(19,19,31,1) 0%, rgba(232,84,122,0.06) 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 220px;">
+          <div style="font-size: 36px; margin-bottom: 14px;">🚀</div>
+          <p style="font-size: 15px; color: var(--muted); font-weight: 300; line-height: 1.6;">Mais projetos em breve.<br/>Acompanhe no GitHub.</p>
+          <a href="https://github.com/marialicer" target="_blank" class="btn btn-ghost" style="margin-top: 20px; font-size: 13px; padding: 10px 20px;">Ver GitHub ↗</a>
+        </div>
+
       </div>
-    </div>
-  </a>
-
-  <a class="project-card card-teal" href="https://github.com/marialicer/hotel-reviews" target="_blank">
-    <div class="card-img">
-      <img src="hotel_reviews.png" alt="HospedaAI">
-      <div class="card-img-overlay"></div>
-      <span class="project-tag tag-teal" style="position:absolute;top:14px;left:14px;margin:0">NLP · ML</span>
-      <span class="project-arrow" style="top:14px;right:14px">↗</span>
-    </div>
-    <div style="padding:20px;display:flex;flex-direction:column;gap:10px;flex:1">
-      <h3 class="project-title">HospedaAI — Análise de Sentimentos</h3>
-      <p class="project-desc">Pipeline completo com TF-IDF, modelos clássicos e BERT para detectar hóspedes insatisfeitos em avaliações do TripAdvisor.</p>
-      <div class="project-tools">
-        <span class="tool-badge">Python</span>
-        <span class="tool-badge">BERT</span>
-        <span class="tool-badge">TF-IDF</span>
-        <span class="tool-badge">NLP</span>
-        <span class="tool-badge">Scikit-learn</span>
-      </div>
-    </div>
-  </a>
-
-  <a class="project-card card-purple" href="https://github.com/marialicer/gaming-mental-health" target="_blank">
-    <div class="card-img">
-      <img src="gaming.png" alt="Gaming & Mental Health">
-      <div class="card-img-overlay"></div>
-      <span class="project-tag tag-purple" style="position:absolute;top:14px;left:14px;margin:0">EDA · Saúde Mental</span>
-      <span class="project-arrow" style="top:14px;right:14px">↗</span>
-    </div>
-    <div style="padding:20px;display:flex;flex-direction:column;gap:10px;flex:1">
-      <h3 class="project-title">Gaming & Mental Health</h3>
-      <p class="project-desc">Relação entre tempo de jogo, qualidade do sono e saúde mental — identificando padrões de risco e dependência em jogadores.</p>
-      <div class="project-tools">
-        <span class="tool-badge">Python</span>
-        <span class="tool-badge">Pandas</span>
-        <span class="tool-badge">NumPy</span>
-        <span class="tool-badge">Matplotlib</span>
-        <span class="tool-badge">Plotly</span>
-      </div>
-    </div>
-  </a>
-
-  <div class="project-card card-pink" style="background: linear-gradient(135deg, rgba(22,19,16,1) 0%, rgba(200,146,74,0.06) 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 220px;">
-    <div style="font-size: 36px; margin-bottom: 14px;">🚀</div>
-    <p style="font-size: 15px; color: var(--muted); font-weight: 300; line-height: 1.6;">Mais projetos em breve.<br/>Acompanhe no GitHub.</p>
-    <a href="https://github.com/marialicer" target="_blank" class="btn btn-ghost" style="margin-top: 20px; font-size: 13px; padding: 10px 20px;">Ver GitHub ↗</a>
-  </div>
-
-</div>
-      
     </section>
 
     <section id="skills">
@@ -742,23 +704,23 @@
           </p>
 
           <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 28px;">
-            <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(122,158,110,0.10); border: 1px solid rgba(122,158,110,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7A9E6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(122,158,110,0.10); border: 1px solid rgba(45, 212, 191, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
                 <circle cx="12" cy="9" r="2.5"/>
               </svg>
             </div>
             <div>
-              <p style="font-size: 11px; color: #9A8F80; font-family: 'DM Mono', monospace; letter-spacing: 1px; margin-bottom: 2px;">Localização</p>
-              <p style="font-size: 14px; font-weight: 500; color: #F2EDE4;">Rio de Janeiro, RJ — Brasil</p>
+              <p style="font-size: 11px; color: #8b89a0; font-family: 'DM Mono', monospace; letter-spacing: 1px; margin-bottom: 2px;">Localização</p>
+              <p style="font-size: 14px; font-weight: 500; color: #f0eef8;">Rio de Janeiro, RJ — Brasil</p>
             </div>
           </div>
         </div>
 
         <div class="contact-links">
           <a href="https://github.com/marialicer" target="_blank" class="contact-link">
-            <div class="contact-link-icon" style="background: rgba(200,146,74,0.08);">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#C8924A"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            <div class="contact-link-icon" style="background: rgba(255,255,255,0.05);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color:#f0eef8"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
             </div>
             <div>
               <p class="contact-link-label">GitHub</p>
@@ -768,7 +730,7 @@
 
           <a href="https://www.linkedin.com/in/maria-alice-rocha-9444a7153/" target="_blank" class="contact-link">
             <div class="contact-link-icon" style="background: rgba(122,158,110,0.10);">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#7A9E6E"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </div>
             <div>
               <p class="contact-link-label">LinkedIn</p>
@@ -778,7 +740,7 @@
 
           <a href="mailto:alicesouzarocha18@gmail.com" class="contact-link">
             <div class="contact-link-icon" style="background: rgba(160,113,79,0.10);">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A0714F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8547a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="4" width="20" height="16" rx="2"/>
                 <path d="M22 7l-10 7L2 7"/>
               </svg>
